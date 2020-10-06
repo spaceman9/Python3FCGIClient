@@ -40,10 +40,11 @@ Unix Socket
 -----------
 The example code above uses a tcp socket. 
 It is also possible to connect to the fast CGI server using a unix socket.
-Change the hostname to a file path starting with /.  The port is ignored.
+Change the hostname to a file path starting with '/' the port is ignored.
 
     client = FastCGIClient('/var/run/php-fpm/www.sock', 0, 3000, 0)
 
-
+References
+----------
 See also the Fast CGI specification at:
 https://fastcgi-archives.github.io
