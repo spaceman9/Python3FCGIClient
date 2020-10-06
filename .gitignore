@@ -1,0 +1,6 @@
+.idea/*
+.idea
+*__/
+FastCGIClient.pyc
+.DS_Store
+
