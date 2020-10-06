@@ -1,18 +1,15 @@
 
 Python FastCGI Client
-
-A `Python` FastCGI Client for directly access FastCGI web resource through `FastCGI`
-
-
-AUTHOR & Email
-================
-
-wuyunfeng
-    - wyfsky888@126.com
+---------------------
+A Python3 FastCGI Client that can directly access a FastCGI web resource
 
 
-How use?(You should start your FastCGI Process)
-========================
+Based on code created by:
+https://github.com/wuyunfeng/Python-FastCGI-Client
+
+
+Usage (First start the FastCGI Process)
+---------------------------------------
 
     from FastCGIClient import *
     client = FastCGIClient('127.0.0.1', 9000, 3000, 0)
@@ -38,5 +35,15 @@ How use?(You should start your FastCGI Process)
           'CONTENT_LENGTH': len(content)
           }
 	client.request(params, content)
-        
 
+Unix Socket
+-----------
+The example code above uses a tcp socket. 
+It is also possible to connect to the fast CGI server using a unix socket.
+Change the hostname to a file path starting with /.  The port is ignored.
+
+    client = FastCGIClient('/var/run/php-fpm/www.sock', 0, 3000, 0)
+
+
+See also the Fast CGI specification at:
+https://fastcgi-archives.github.io

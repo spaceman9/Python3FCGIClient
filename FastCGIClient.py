@@ -5,7 +5,7 @@ import random
 
 
 class FastCGIClient:
-    """A Fast-CGI Client for Python"""
+    """A Fast-CGI Client for Python3"""
 
     # private
     __FCGI_VERSION = 1
