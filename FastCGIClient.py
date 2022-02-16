@@ -163,7 +163,6 @@ class FastCGIClient:
     def __waitForResponse(self, requestId):
         while True:
             response = self.__decodeFastCGIRecord()
-            print(response)
             if not response:
                 self.requests[requestId]['state'] = FastCGIClient.FCGI_STATE_ERROR
                 break
